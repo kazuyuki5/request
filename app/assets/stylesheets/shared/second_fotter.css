@@ -5,10 +5,12 @@
   background-color: #f5f5f5;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  
 }
 
 .second-fotter-text-wrap {
-  margin: 30px 0;
+  margin: 30px ;
   display: flex;
   justify-content: center;
 }
@@ -16,7 +18,7 @@
 .second-fotter-text {
   color: #333;
   font-size: 12px;
-  margin: 0 10px;
+  margin: 0 10px 
 }
 
 .second-fotter-logo {
