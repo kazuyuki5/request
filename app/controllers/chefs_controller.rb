@@ -10,10 +10,10 @@ class ChefsController < ApplicationController
     @chef = Chef.new
   end
 
-  def create
-    
+  def create 
     @chef = Chef.new(chef_params)
-    if @chef.save
+    if @chef.valid?
+      @chef.save
       redirect_to root_path
     else
       render :new

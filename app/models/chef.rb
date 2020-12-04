@@ -11,7 +11,7 @@ class Chef < ApplicationRecord
     validates :nickname
     validates :profile
     validates :area
-    validates :price
+    validates :price, format: {with: /\A[0-9]+\z/}
     with_options numericality: { other_than: 1 } do
       validates :category_id
       validates :fee_time_id
