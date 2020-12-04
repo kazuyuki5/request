@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2020_12_03_100448) do
     t.text "profile", null: false
     t.integer "category_id", null: false
     t.string "area", null: false
-    t.integer "time_id", null: false
+    t.integer "fee_time_id", null: false
     t.integer "price", null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false

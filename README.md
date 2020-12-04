@@ -20,7 +20,7 @@
 | profile         | text       | null: false                    |
 | category_id     | integer    | null: false                    |
 | area            | string     | null: false                    |
-| time_id         | integer    | null: false                    | 
+| fee_time_id     | integer    | null: false                    | 
 | price           | integer    | null: false                    |
 
 
@@ -46,7 +46,7 @@
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
 | request       | references | null: false, foreign_key: true |
-| area_id       | integer    | null: false                    |
+| prefecture_id | integer    | null: false                    |
 | city          | string     | null: false                    |
 | address       | string     | null: false                    |
 | building      | string     |                                |
