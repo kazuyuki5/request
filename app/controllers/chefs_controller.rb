@@ -29,8 +29,10 @@ class ChefsController < ApplicationController
   end
 
   def update
+    @chef = Chef.find(params[:id])
+    @chef.update(chef_params)
   end
-  
+
   private
 
   def chef_params
