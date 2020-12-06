@@ -1,5 +1,5 @@
 class ChefsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index]
   before_action :move_to_index, except: [:index, :show]
 
   def index
@@ -18,6 +18,14 @@ class ChefsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @chef = Chef.find(params[:id])
+  end
+
+  def edit
+    @chef = Chef.find(params[:id])
   end
 
   private

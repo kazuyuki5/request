@@ -43,7 +43,7 @@
 .weight-bold-text {
   font-weight: bold;
   min-width: 170px;
-  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .select-box {
@@ -103,6 +103,7 @@
   border: 1px solid #ccc;
   font-size: 16px;
   resize: none;
+  margin-bottom: 10px;
 }
 
 .items-explain {
@@ -124,7 +125,7 @@
 }
 
 .select-box {
-  margin: 2vh 0;
+  margin: 1vh 0;
 }
 
 /* /商品の詳細など */
