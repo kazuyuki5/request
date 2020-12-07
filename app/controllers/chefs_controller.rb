@@ -1,7 +1,7 @@
 class ChefsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :move_to_index, except: [:index, :show]
-  before_action :set_item, only: [:show, :edit, :update]
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
   
 
   def index
@@ -36,6 +36,15 @@ class ChefsController < ApplicationController
       redirect_to root_path
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if user_signed_in? && current_user.id == @chef.user_id
+     @chef.destroy
+     redirect_to root_path
+    else
+     redirect_to  root_path
     end
   end
 
