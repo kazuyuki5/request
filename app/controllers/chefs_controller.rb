@@ -1,6 +1,8 @@
 class ChefsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :move_to_index, except: [:index, :show]
+  before_action :set_item, only: [:show, :edit, :update]
+  
 
   def index
     @chefs = Chef.order("created_at DESC")
@@ -21,16 +23,20 @@ class ChefsController < ApplicationController
   end
 
   def show
-    @chef = Chef.find(params[:id])
   end
 
   def edit
-    @chef = Chef.find(params[:id])
+    unless user_signed_in? && current_user.id == @chef.user_id
+      redirect_to root_path
+    end
   end
 
   def update
-    @chef = Chef.find(params[:id])
-    @chef.update(chef_params)
+    if @chef.update(chef_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   private
@@ -44,4 +50,9 @@ class ChefsController < ApplicationController
       redirect_to action: :index
     end
   end
+
+  def set_item
+    @chef = Chef.find(params[:id])
+  end
+
 end
