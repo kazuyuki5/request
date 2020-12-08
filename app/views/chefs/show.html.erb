@@ -101,7 +101,7 @@
     <%= link_to 'シェフ情報の削除', chef_path(@chef), method: :delete, class:'item-destroy' %>
 <% else %>
     <%# 商品が売れていない場合はこちらを表示しましょう %>
-    <%= link_to '依頼する', "#" ,class:"item-red-btn"%>
+    <%= link_to '依頼する', chef_request_chef_index_path(@chef.id) ,class:"item-red-btn"%>
     <%# //商品が売れていない場合はこちらを表示しましょう %>
 <% end %>
 <% end %>

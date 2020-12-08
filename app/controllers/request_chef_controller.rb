@@ -1,6 +1,11 @@
 class RequestChefController < ApplicationController
 
   def index
- @requests = RequestChef.new
+ @request_chef = RequestChef.new
   end
+
+  def create
+   
+  end
+
 end
