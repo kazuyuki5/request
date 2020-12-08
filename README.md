@@ -29,7 +29,7 @@
 - belongs_to :user
 - has_one    :request
 
-## requests テーブル
+## requests_chef テーブル
 
 | Column              | Type       | Options                        |
 | ------------------- | ---------- | ------------------------------ |
@@ -45,14 +45,15 @@
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
-| request       | references | null: false, foreign_key: true |
+| request_chef  | references | null: false, foreign_key: true |
+| postal_code   | string     | null: false, foreign_key: true |
 | prefecture_id | integer    | null: false                    |
 | city          | string     | null: false                    |
-| address       | string     | null: false                    |
-| building      | string     |                                |
+| house_number  | string     | null: false                    |
+| building_name | string     |                                |
 | phone_number  | string     | null: false                    |
 
 
 ### Association
 
-- belongs_to request
+- belongs_to :request
