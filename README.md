@@ -56,4 +56,4 @@
 
 ### Association
 
-- belongs_to :request
+- belongs_to :request_chef
