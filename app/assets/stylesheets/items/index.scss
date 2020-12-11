@@ -10,7 +10,7 @@ a {
 .title-contents {
   width: 100vw;
   // background-image: image-url('furima-header01.png');
-  background-image: image-url('breakfast-690128_1280.jpg');
+  background-image: image-url('brooke-lark-C1fMH2Vej8A-unsplash.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -19,7 +19,7 @@ a {
   align-items: flex-start;
   justify-content: center;
   padding: 5vh 15vw;
-  color: #fff;
+  color: rgba(247, 246, 243, 0.963);
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
@@ -65,7 +65,7 @@ a {
   content: '';
   width: 70px;
   height: 4px;
-  background-color: #3ccace;
+  background-color: #cec43c;
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -100,7 +100,7 @@ a {
   font-size: 30px;
   text-align: center;
   line-height: 60px;
-  background-color: #3ccace;
+  background-color: #cec43c;
   color: #fff;
 }
 
@@ -111,7 +111,8 @@ a {
 }
 
 .reason-list-blue-text {
-  color: #3ccace;
+  // color: #3ccace;
+  color: #ce463c;
 }
 
 .reason-list-description {
@@ -181,7 +182,8 @@ a {
   content: '';
   width: 70px;
   height: 4px;
-  background-color: #3ccace;
+  // background-color: #3ccace;
+  background-color: #cec43c;
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -234,7 +236,8 @@ a {
   font-size: 3vh;
   margin: 1vh 0;
   text-decoration: none;
-  color: #3ccace;
+  // color: #3ccace;
+  color:#cec43c;
   font-weight: bold;
 }
 

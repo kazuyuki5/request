@@ -10,8 +10,9 @@ def index
 end
 
 def create
-  binding.pry
+ binding.pry
   @req_add = ReqAdd.new(request_chef_params)
+ 
   if @req_add.valid?
     pay_item
     @req_add.save
@@ -28,7 +29,7 @@ def request_chef_params
 end
 
 def pay_item
-  Payjp.api_key = ENV['PAYJP_SECRET_KEY']
+  Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
   Payjp::Charge.create(
     amount: @chef[:price],
     card: request_chef_params[:token],
