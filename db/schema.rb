@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2020_12_08_050720) do
     t.string "city", default: ""
     t.string "house_number", default: ""
     t.string "building_name", default: ""
+    t.string "phone_number", default: ""
     t.bigint "request_chef_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
