@@ -62,7 +62,16 @@
 ### Association
 
 - belongs_to :user
+- has_many   :photos
 - has_one    :request
+
+## photos テーブル
+| Column          | Type       | Options                        |
+| --------------- | ---------- | ------------------------------ |
+| chefs           | references | foreign_key: true              |
+
+### Association
+- belongs_to :chef
 
 ## requests_chef テーブル
 
